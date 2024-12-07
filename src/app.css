@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+p,
+li,
+label,
+h1,
+h2,
+h3,
+h4,
+h5 {
+    @apply dark:text-white;
+}
