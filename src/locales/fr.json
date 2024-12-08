@@ -3,17 +3,32 @@
         "tassadraft": "Tassadraft",
         "tassacards": "Tassacards",
         "tassadecks": "Tassadecks",
+        "back-to-home": "Retour à l'accueil",
         "yes": "Oui",
-        "no": "Non"
+        "no": "Non",
+        "name": "Nom",
+        "value": "Valeur(s)"
     },
     "toast": {
-
+        "copy": {
+            "success": "Copié dans le presse-papier"
+        }
     },
     "menu": {
         "source-code": "Code source",
         "home": "Accueil",
         "legals": "Mentions légales",
         "terms-and-conditions": "Conditions générales d'utilisation"
+    },
+    "home": {
+        "title": "Accueil"
+    },
+    "end-point": {
+        "query-string": {
+            "required": "Query strings requis",
+            "optional": "Query strings optionnels"
+        },
+        "body": "Corps de requête"
     },
     "legals": {
         "title": "Mentions Légales",
@@ -180,5 +195,16 @@
     },
     "not-found": {
         "title": "Page inexistante"
+    },
+    "tassadapi": {
+        "title": "Tassadapi",
+        "end-points": {
+            "title": "Endpoints Tassadapi",
+            "description": "Documentation des endpoints exposés de Tassadapi, comprenant les méthodes, query strings et corps de requête"
+        },
+        "models": {
+            "title": "Modèles",
+            "description": "Structure détaillée des données retournées par Tassadapi"
+        }
     }
 }

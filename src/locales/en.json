@@ -3,17 +3,33 @@
         "tassadraft": "Tassadraft",
         "tassacards": "Tassacards",
         "tassadecks": "Tassadecks",
+        "tassadapi": "Tassadapi",
+        "back-to-home": "Back to home",
         "yes": "Yes",
-        "no": "No"
+        "no": "No",
+        "name": "Name",
+        "value": "Value(s)"
     },
     "toast": {
-
+        "copy": {
+            "success": "Copied to clipboard"
+        }
     },
     "menu": {
         "source-code": "Source code",
         "home": "Home",
         "legals": "Legals",
         "terms-and-conditions": "Terms and conditions"
+    },
+    "home": {
+        "title": "Home"
+    },
+    "end-point": {
+        "query-string": {
+            "required": "Required query strings",
+            "optional": "Optional query strings"
+        },
+        "body": "Body"
     },
     "legals": {
         "title": "Legal Notice",
@@ -180,5 +196,16 @@
     },
     "not-found": {
         "title": "Page not found"
+    },
+    "tassadapi": {
+        "title": "Tassadapi",
+        "end-points": {
+            "title": "Tassadapi endpoints",
+            "description": "Tassadapi exposed endpoints documentation including methods, query strings, bodies"
+        },
+        "models": {
+            "title": "Models",
+            "description": "Tassadapi detailed returned data structures"
+        }
     }
 }

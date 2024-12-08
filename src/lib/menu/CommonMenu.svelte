@@ -7,4 +7,5 @@
 
 <ul class={`${footer ? '' : 'space-y-4'} p-4`}>
     <MenuItem {footer} iconLeft="home" href="/">{$t('menu.home')}</MenuItem>
+    <MenuItem {footer} iconLeft="cloud" href="/tassadapi">{$t('common.tassadapi')}</MenuItem>
 </ul>

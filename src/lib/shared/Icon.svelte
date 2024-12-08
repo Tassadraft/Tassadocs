@@ -14,7 +14,11 @@
         'ChevronRight',
         'Gavel',
         'Search',
-        'Home'
+        'Home',
+        'Copy',
+        'Cloud',
+        'Structure',
+        'Request'
     ];
 
     const toCamelCase = (str) => {
