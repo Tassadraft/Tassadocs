@@ -1,5 +1,5 @@
 <script>
-    import Menu from '../menu/Menu.svelte';
+    import RetractableMenu from '../menu/RetractableMenu.svelte';
     import Title from '../shared/Title.svelte';
     import { t, json } from 'svelte-i18n';
     import Subtitle from '../shared/Subtitle.svelte';
@@ -7,7 +7,7 @@
     import Panel from '../shared/Panel.svelte';
 </script>
 
-<Menu />
+<RetractableMenu />
 
 <Title title={$t('legals.title')} />
 
