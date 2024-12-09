@@ -4,6 +4,11 @@
     import Model from '../../shared/Model.svelte';
 </script>
 
-<TassadapiModelsMenu title={$t('common.build')}>
-    <Model model={{ version: 'string', downloads: 'number', size: 'number (in MB)', extension: '"apk" | "ipa"' }} />
+<TassadapiModelsMenu title={$t('common.card-print-purchase-uri')}>
+    <Model
+        model={{
+            tcgPlayer: 'string | undefined',
+            cardMarket: 'string | undefined',
+        }}
+    />
 </TassadapiModelsMenu>

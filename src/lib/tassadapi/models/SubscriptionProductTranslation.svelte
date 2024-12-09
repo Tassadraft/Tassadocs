@@ -10,7 +10,7 @@
             enabled: 'boolean',
             stripePriceId: 'string',
             language: `<span class="font-bold">${$t('common.language')}</span>`,
-            features: `<span class="font-bold">${$t('common.subscription-product-translation-feature')}[]</span>`,
+            features: `<span class="font-bold">${$t('common.subscription-product-translation-feature')} []</span>`,
         }}
     />
 </TassadapiModelsMenu>

@@ -6,7 +6,8 @@
 
 <TassadapiModelsMenu title={$t('common.set')} description={$t('tassadapi.models.set.description')}>
     <Model
-        model={{
+        model={
+        {
             name: 'string',
             code: 'string',
             releasedAt: 'string | undefined',

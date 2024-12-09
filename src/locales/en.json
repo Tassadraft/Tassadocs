@@ -20,8 +20,24 @@
         "card": "Card",
         "card-light": "Card (light)",
         "card-print": "Card print",
+        "card-print-face": "Card print face",
+        "card-print-image-uri": "Card print image uri",
+        "card-print-price": "Card print price",
+        "card-print-purchase-uri": "Card print purchase uri",
+        "card-print-related-uri": "Card print related uri",
+        "card-print-translation": "Card print translation",
+        "subscription-product": "Product",
+        "subscription-product-translation": "Product translation",
         "subscription-product-translation-feature": "Product feature",
-        "subscription-product-translation": "Product translation"
+        "subscription": "Subscription",
+        "github-repository": "Github repository",
+        "github-repository-label": "Github label",
+        "deck": "Deck",
+        "deck-light": "Deck (light)",
+        "deck-card": "Deck card",
+        "deck-card-related-card-print": "Deck card related card print",
+        "deck-category": "Deck category",
+        "user": "User"
     },
     "toast": {
         "copy": {
@@ -32,7 +48,9 @@
         "source-code": "Source code",
         "home": "Home",
         "legals": "Legals",
-        "terms-and-conditions": "Terms and conditions"
+        "terms-and-conditions": "Terms and conditions",
+        "models": "Models",
+        "end-points": "Endpoints"
     },
     "home": {
         "title": "Home"

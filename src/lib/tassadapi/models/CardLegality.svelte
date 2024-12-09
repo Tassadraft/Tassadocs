@@ -4,7 +4,7 @@
     import Model from '../../shared/Model.svelte';
 </script>
 
-<TassadapiModelsMenu title={$t('common.card-legality')} description={$t('tassadapi.models.card-legality.description')}>
+<TassadapiModelsMenu title={$t('common.card-legality')}>
     <Model
         model={{
             standard: 'legal | not_legal | restricted | banned | undefined',

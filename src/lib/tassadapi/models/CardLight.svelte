@@ -11,8 +11,8 @@
             layout: 'string',
             manaCost: 'string',
             cmc: 'number',
-            colors: 'string[]',
-            colorIdentity: 'string[]',
+            colors: 'string []',
+            colorIdentity: 'string []',
             rarity: 'string',
         }}
     />

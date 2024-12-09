@@ -11,11 +11,11 @@
             layout: 'string',
             manaCost: 'string',
             cmc: 'number',
-            colors: 'string[]',
-            colorIdentity: 'string[]',
+            colors: 'string []',
+            colorIdentity: 'string []',
             rarity: 'string',
             legality: `<span class="font-bold">${$t('common.card-legality')}</span>`,
-            prints: `<span class="font-bold">${$t('common.card-print')}</span>[]`,
+            prints: `<span class="font-bold">${$t('common.card-print')}</span> []`,
         }}
     />
 </TassadapiModelsMenu>

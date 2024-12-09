@@ -35,7 +35,7 @@
 
 <div class="flex">
     {#if !$isMobile}
-        <nav id="menu" class="w-64 h-screen bg-gray-700 dark:bg-gray-800 text-white flex-shrink-0">
+        <nav id="menu" class="w-80 h-full dark:bg-gray-800 flex-shrink-0">
             <div class="p-4">
                 <ThemeSwitch />
             </div>
@@ -53,9 +53,9 @@
 
                     <nav
                         id="menu"
-                        class="fixed top-0 left-0 w-64 h-full bg-gray-700 dark:bg-gray-800 text-white transform transition-transform duration-300 ease-in-out {isOpen
+                        class="fixed top-0 left-0 w-64 h-full dark:bg-gray-800 transform transition-transform duration-300 ease-in-out {isOpen
                             ? ''
-                            : '-translate-x-full'}"
+                            : '-translate-x-full'} overflow-y-auto"
                         style="z-index: 10000"
                     >
                         <div class="flex justify-between items-center p-4">
