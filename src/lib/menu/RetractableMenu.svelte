@@ -5,6 +5,7 @@
     import Button from '../shared/Button.svelte';
     import IconButton from '../shared/IconButton.svelte';
     import CommonMenu from './CommonMenu.svelte';
+    import FlagMenu from './FlagMenu.svelte';
 
     let isOpen = false;
 
@@ -26,10 +27,13 @@
             document.removeEventListener('click', handleClickOutside);
         };
     });
+
+    $: {
+    }
 </script>
 
-<div class="flex justify-start">
-    <div class="mt-3">
+<div class="flex justify-between items-center mt-3">
+    <div>
         <Button idName="menu-button" className={isOpen ? 'opacity-0' : ''} on:click={() => (isOpen = !isOpen)}>
             <Icon name="burger" />
         </Button>
@@ -51,4 +55,5 @@
             <CommonMenu />
         </nav>
     </div>
+    <FlagMenu />
 </div>

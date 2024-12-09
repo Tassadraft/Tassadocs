@@ -1,5 +1,5 @@
 <script>
-    import Menu from '../menu/Menu.svelte';
+    import RetractableMenu from '../menu/RetractableMenu.svelte';
     import Title from '../shared/Title.svelte';
     import { t, json } from 'svelte-i18n';
     import Subtitle from '../shared/Subtitle.svelte';
@@ -7,7 +7,7 @@
     import Panel from '../shared/Panel.svelte';
 </script>
 
-<Menu />
+<RetractableMenu />
 
 <Title title={$t('legals.title')} />
 
@@ -56,7 +56,8 @@
         </div>
         <p>{$t('legals.personal-data.description')}</p>
         <p>{$t('legals.personal-data.rights')}</p>
-        <p>{$t('legals.personal-data.contact')}
+        <p>
+            {$t('legals.personal-data.contact')}
             <Link href="mailto:tassadapi@tassadraft.com" className="text-primary-500 hover:text-white duration-300 transition-colors">
                 {process.env.VITE_TASSADAPI_CONTACT}
             </Link>.

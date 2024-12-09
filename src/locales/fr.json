@@ -3,17 +3,64 @@
         "tassadraft": "Tassadraft",
         "tassacards": "Tassacards",
         "tassadecks": "Tassadecks",
+        "tassadapi": "Tassadapi",
+        "back-to-home": "Retour à l'accueil",
         "yes": "Oui",
-        "no": "Non"
+        "no": "Non",
+        "name": "Nom",
+        "value": "Valeur(s)",
+        "field": "Champ",
+        "type": "Type",
+        "language": "Language",
+        "build": "Build",
+        "category": "Category",
+        "file": "File",
+        "set": "Set",
+        "card-legality": "Card legality",
+        "card": "Card",
+        "card-light": "Card (light)",
+        "card-print": "Card print",
+        "card-print-face": "Card print face",
+        "card-print-image-uri": "Card print image uri",
+        "card-print-price": "Card print price",
+        "card-print-purchase-uri": "Card print purchase uri",
+        "card-print-related-uri": "Card print related uri",
+        "card-print-translation": "Card print translation",
+        "subscription-product": "Product",
+        "subscription-product-translation": "Product translation",
+        "subscription-product-translation-feature": "Product feature",
+        "subscription": "Subscription",
+        "github-repository": "Github repository",
+        "github-repository-label": "Github label",
+        "deck": "Deck",
+        "deck-light": "Deck (light)",
+        "deck-card": "Deck card",
+        "deck-card-related-card-print": "Deck card related card print",
+        "deck-category": "Deck category",
+        "user": "User"
     },
     "toast": {
-
+        "copy": {
+            "success": "Copié dans le presse-papier"
+        }
     },
     "menu": {
         "source-code": "Code source",
         "home": "Accueil",
         "legals": "Mentions légales",
-        "terms-and-conditions": "Conditions générales d'utilisation"
+        "terms-and-conditions": "Conditions générales d'utilisation",
+        "models": "Modèles",
+        "end-points": "Endpoints"
+    },
+    "home": {
+        "title": "Accueil"
+    },
+    "end-point": {
+        "query-string": {
+            "required": "Query strings requis",
+            "optional": "Query strings optionnels"
+        },
+        "body": "Corps de requête"
     },
     "legals": {
         "title": "Mentions Légales",
@@ -180,5 +227,31 @@
     },
     "not-found": {
         "title": "Page inexistante"
+    },
+    "tassadapi": {
+        "title": "Tassadapi",
+        "end-points": {
+            "title": "Endpoints Tassadapi",
+            "description": "Documentation des endpoints exposés de Tassadapi, comprenant les méthodes, query strings et corps de requête"
+        },
+        "models": {
+            "title": "Modèles",
+            "description": "Les modèles sont les objets retournés par Tassadapi",
+            "language": {
+                "description": "La langue est le modèle de base pour tous les modèles traduits"
+            },
+            "category": {
+                "description": "Les catégories sont des regroupements de cartes au sein d'un deck"
+            },
+            "set": {
+                "description": "Les éditions sont les éditions officielles de Magic: the Gathering"
+            },
+            "card": {
+                "description": "Carte regroupant les propriétés communes à travers les éditions des cartes de Magic: the Gathering"
+            },
+            "card-light": {
+                "description": "Version allégée sans <span class=\"font-bold\">CardPrint</span>. Carte regroupant les propriétés communes à travers les éditions des cartes de Magic: the Gathering"
+            }
+        }
     }
 }
