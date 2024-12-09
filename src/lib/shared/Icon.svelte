@@ -27,6 +27,15 @@
         'File',
         'Package',
         'Card',
+        'User',
+        'Mastercard',
+        'Link',
+        'ArrowLeft',
+        'Price',
+        'Github',
+        'Label',
+        'Stack',
+        'Feature',
     ];
 
     const toCamelCase = (str) => {

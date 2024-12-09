@@ -50,8 +50,8 @@
                 <Route path="/legals"><Legals /></Route>
                 <Route path="/terms-and-conditions"><TermsAndConditions /></Route>
                 <Route path="/tassadapi"><Tassadapi /></Route>
-                <Route path="/tassadapi/end-points"><TassadapiEndpoints /></Route>
 
+                <!-- Models documentation part -->
                 <Route path="/tassadapi/models"><TassadapiModels /></Route>
                 <Route path="/tassadapi/models/language"><Language /></Route>
                 <Route path="/tassadapi/models/build"><Build /></Route>
@@ -80,6 +80,9 @@
                 <Route path="/tassadapi/models/deck-card-related-card-print"><DeckCardRelatedCardPrint /></Route>
                 <Route path="/tassadapi/models/deck-category"><DeckCategory /></Route>
                 <Route path="/tassadapi/models/user"><User /></Route>
+
+                <!-- Models documentation part -->
+                <Route path="/tassadapi/end-points"><TassadapiEndpoints /></Route>
 
                 <Route path="*"><NotFound /></Route>
             </Router>

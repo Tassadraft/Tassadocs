@@ -33,31 +33,31 @@
                 <MenuItem iconLeft="card" href="/tassadapi/models/card-print">{$t('common.card-print')}</MenuItem>
                 <MenuItem iconLeft="card" href="/tassadapi/models/card-print-face">{$t('common.card-print-face')}</MenuItem>
                 <MenuItem iconLeft="card" href="/tassadapi/models/card-print-image-uri">{$t('common.card-print-image-uri')}</MenuItem>
-                <MenuItem iconLeft="card" href="/tassadapi/models/card-print-price">{$t('common.card-print-price')}</MenuItem>
-                <MenuItem iconLeft="card" href="/tassadapi/models/card-print-purchase-uri">{$t('common.card-print-purchase-uri')}</MenuItem>
-                <MenuItem iconLeft="card" href="/tassadapi/models/card-print-related-uri">{$t('common.card-print-related-uri')}</MenuItem>
-                <MenuItem iconLeft="card" href="/tassadapi/models/card-print-translation">{$t('common.card-print-translation')}</MenuItem>
+                <MenuItem iconLeft="price" href="/tassadapi/models/card-print-price">{$t('common.card-print-price')}</MenuItem>
+                <MenuItem iconLeft="price" href="/tassadapi/models/card-print-purchase-uri">{$t('common.card-print-purchase-uri')}</MenuItem>
+                <MenuItem iconLeft="link" href="/tassadapi/models/card-print-related-uri">{$t('common.card-print-related-uri')}</MenuItem>
+                <MenuItem iconLeft="language" href="/tassadapi/models/card-print-translation">{$t('common.card-print-translation')}</MenuItem>
             </Panel>
             <Panel>
-                <MenuItem iconLeft="card" href="/tassadapi/models/subscription-product">{$t('common.subscription-product')}</MenuItem>
-                <MenuItem iconLeft="card" href="/tassadapi/models/subscription-product-translation">{$t('common.subscription-product-translation')}</MenuItem>
-                <MenuItem iconLeft="card" href="/tassadapi/models/subscription-product-translation-feature">{$t('common.subscription-product-translation-feature')}</MenuItem>
+                <MenuItem iconLeft="package" href="/tassadapi/models/subscription-product">{$t('common.subscription-product')}</MenuItem>
+                <MenuItem iconLeft="language" href="/tassadapi/models/subscription-product-translation">{$t('common.subscription-product-translation')}</MenuItem>
+                <MenuItem iconLeft="feature" href="/tassadapi/models/subscription-product-translation-feature">{$t('common.subscription-product-translation-feature')}</MenuItem>
             </Panel>
             <Panel>
-                <MenuItem iconLeft="card" href="/tassadapi/models/github-repository">{$t('common.github-repository')}</MenuItem>
-                <MenuItem iconLeft="card" href="/tassadapi/models/github-repository-label">{$t('common.github-repository-label')}</MenuItem>
+                <MenuItem iconLeft="github" href="/tassadapi/models/github-repository">{$t('common.github-repository')}</MenuItem>
+                <MenuItem iconLeft="label" href="/tassadapi/models/github-repository-label">{$t('common.github-repository-label')}</MenuItem>
             </Panel>
             <Panel>
-                <MenuItem iconLeft="card" href="/tassadapi/models/deck">{$t('common.deck')}</MenuItem>
-                <MenuItem iconLeft="card" href="/tassadapi/models/deck-light">{$t('common.deck-light')}</MenuItem>
-                <MenuItem iconLeft="card" href="/tassadapi/models/deck-category">{$t('common.deck-category')}</MenuItem>
+                <MenuItem iconLeft="stack" href="/tassadapi/models/deck">{$t('common.deck')}</MenuItem>
+                <MenuItem iconLeft="stack" href="/tassadapi/models/deck-light">{$t('common.deck-light')}</MenuItem>
+                <MenuItem iconLeft="list" href="/tassadapi/models/deck-category">{$t('common.deck-category')}</MenuItem>
                 <MenuItem iconLeft="list" href="/tassadapi/models/category">{$t('common.category')}</MenuItem>
                 <MenuItem iconLeft="card" href="/tassadapi/models/deck-card">{$t('common.deck-card')}</MenuItem>
-                <MenuItem iconLeft="card" href="/tassadapi/models/deck-card-related-card-print">{$t('common.deck-card-related-card-print')}</MenuItem>
+                <MenuItem iconLeft="link" href="/tassadapi/models/deck-card-related-card-print">{$t('common.deck-card-related-card-print')}</MenuItem>
             </Panel>
             <Panel>
-                <MenuItem iconLeft="card" href="/tassadapi/models/user">{$t('common.user')}</MenuItem>
-                <MenuItem iconLeft="card" href="/tassadapi/models/subscription">{$t('common.subscription')}</MenuItem>
+                <MenuItem iconLeft="user" href="/tassadapi/models/user">{$t('common.user')}</MenuItem>
+                <MenuItem iconLeft="mastercard" href="/tassadapi/models/subscription">{$t('common.subscription')}</MenuItem>
             </Panel>
         </div>
     </div>
