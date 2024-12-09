@@ -11,14 +11,17 @@
         "value": "Valeur(s)",
         "field": "Champ",
         "type": "Type",
-        "language": "Langue",
-        "build": "Compilation",
-        "category": "Catégorie",
-        "file": "Fichier",
-        "set": "Édition",
-        "card-legality": "Légalités de carte",
-        "card": "Carte",
-        "card-light": "Carte (allégée)"
+        "language": "Language",
+        "build": "Build",
+        "category": "Category",
+        "file": "File",
+        "set": "Set",
+        "card-legality": "Card legality",
+        "card": "Card",
+        "card-light": "Card (light)",
+        "card-print": "Card print",
+        "subscription-product-translation-feature": "Product feature",
+        "subscription-product-translation": "Product translation"
     },
     "toast": {
         "copy": {
@@ -230,6 +233,7 @@
             },
             "card-light": {
                 "description": "Version allégée sans <span class=\"font-bold\">CardPrint</span>. Carte regroupant les propriétés communes à travers les éditions des cartes de Magic: the Gathering"
+            }
         }
     }
 }

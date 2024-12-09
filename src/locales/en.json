@@ -18,7 +18,10 @@
         "set": "Set",
         "card-legality": "Card legality",
         "card": "Card",
-        "card-light": "Card (light)"
+        "card-light": "Card (light)",
+        "card-print": "Card print",
+        "subscription-product-translation-feature": "Product feature",
+        "subscription-product-translation": "Product translation"
     },
     "toast": {
         "copy": {

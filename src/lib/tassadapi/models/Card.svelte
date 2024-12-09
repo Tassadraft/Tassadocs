@@ -14,8 +14,8 @@
             colors: 'string[]',
             colorIdentity: 'string[]',
             rarity: 'string',
-            legality: '<span class="font-bold">CardLegality</span>',
-            prints: '<span class="font-bold">CardPrint</span>[]',
+            legality: `<span class="font-bold">${$t('common.card-legality')}</span>`,
+            prints: `<span class="font-bold">${$t('common.card-print')}</span>[]`,
         }}
     />
 </TassadapiModelsMenu>

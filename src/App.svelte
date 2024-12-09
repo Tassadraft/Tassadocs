@@ -18,6 +18,9 @@
     import Card from './lib/tassadapi/models/Card.svelte';
     import CardLegality from './lib/tassadapi/models/CardLegality.svelte';
     import CardLight from './lib/tassadapi/models/CardLight.svelte';
+    import SubscriptionProductTranslationFeature
+        from './lib/tassadapi/models/SubscriptionProductTranslationFeature.svelte';
+    import SubscriptionProductTranslation from './lib/tassadapi/models/SubscriptionProductTranslation.svelte';
 
     export let url = '';
 </script>
@@ -41,6 +44,8 @@
                 <Route path="/tassadapi/models/card-legality"><CardLegality /></Route>
                 <Route path="/tassadapi/models/card"><Card /></Route>
                 <Route path="/tassadapi/models/card-light"><CardLight /></Route>
+                <Route path="/tassadapi/models/subscription-product-translation-feature"><SubscriptionProductTranslationFeature /></Route>
+                <Route path="/tassadapi/models/subscription-product-translation"><SubscriptionProductTranslation /></Route>
 
                 <Route path="*"><NotFound /></Route>
             </Router>
