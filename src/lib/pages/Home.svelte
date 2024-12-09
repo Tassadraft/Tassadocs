@@ -15,9 +15,9 @@
     method="get"
     endpoint={`${process.env.VITE_TASSADAPI_BASE_URL}`}
     queryArgs={{
-        required: [{language: ['en', 'fr']}, {language: ['en', 'fr']}]
+        required: [{ language: ['en', 'fr'] }, { language: ['en', 'fr'] }],
     }}
     body={{
-        cardId: "Deck card id"
+        cardId: 'Deck card id',
     }}
 />

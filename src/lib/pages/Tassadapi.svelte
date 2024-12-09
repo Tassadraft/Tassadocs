@@ -19,7 +19,7 @@
                 title: $t('tassadapi.end-points.title'),
                 icon: 'request',
                 description: $t('tassadapi.end-points.description'),
-            }
+            },
         ];
     }
 </script>

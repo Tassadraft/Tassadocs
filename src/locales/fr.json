@@ -3,11 +3,22 @@
         "tassadraft": "Tassadraft",
         "tassacards": "Tassacards",
         "tassadecks": "Tassadecks",
+        "tassadapi": "Tassadapi",
         "back-to-home": "Retour à l'accueil",
         "yes": "Oui",
         "no": "Non",
         "name": "Nom",
-        "value": "Valeur(s)"
+        "value": "Valeur(s)",
+        "field": "Champ",
+        "type": "Type",
+        "language": "Langue",
+        "build": "Compilation",
+        "category": "Catégorie",
+        "file": "Fichier",
+        "set": "Édition",
+        "card-legality": "Légalités de carte",
+        "card": "Carte",
+        "card-light": "Carte (allégée)"
     },
     "toast": {
         "copy": {
@@ -204,7 +215,21 @@
         },
         "models": {
             "title": "Modèles",
-            "description": "Structure détaillée des données retournées par Tassadapi"
+            "description": "Les modèles sont les objets retournés par Tassadapi",
+            "language": {
+                "description": "La langue est le modèle de base pour tous les modèles traduits"
+            },
+            "category": {
+                "description": "Les catégories sont des regroupements de cartes au sein d'un deck"
+            },
+            "set": {
+                "description": "Les éditions sont les éditions officielles de Magic: the Gathering"
+            },
+            "card": {
+                "description": "Carte regroupant les propriétés communes à travers les éditions des cartes de Magic: the Gathering"
+            },
+            "card-light": {
+                "description": "Version allégée sans <span class=\"font-bold\">CardPrint</span>. Carte regroupant les propriétés communes à travers les éditions des cartes de Magic: the Gathering"
         }
     }
 }

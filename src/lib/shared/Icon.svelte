@@ -18,7 +18,15 @@
         'Copy',
         'Cloud',
         'Structure',
-        'Request'
+        'Request',
+        'ChevronUp',
+        'ChevronDown',
+        'Language',
+        'Lego',
+        'List',
+        'File',
+        'Package',
+        'Card',
     ];
 
     const toCamelCase = (str) => {
