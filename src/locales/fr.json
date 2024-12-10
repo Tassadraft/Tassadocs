@@ -234,6 +234,25 @@
     },
     "tassadapi": {
         "title": "Tassadapi",
+        "models": {
+            "title": "Modèles",
+            "description": "Les modèles sont les objets retournés par Tassadapi",
+            "language": {
+                "description": "La langue est le modèle de base pour tous les modèles traduits"
+            },
+            "category": {
+                "description": "Les catégories sont des regroupements de cartes au sein d'un deck"
+            },
+            "set": {
+                "description": "Les éditions sont les éditions officielles de Magic: the Gathering"
+            },
+            "card": {
+                "description": "Carte regroupant les propriétés communes à travers les éditions des cartes de Magic: the Gathering"
+            },
+            "card-light": {
+                "description": "Version allégée sans <span class=\"font-bold\">CardPrint</span>. Carte regroupant les propriétés communes à travers les éditions des cartes de Magic: the Gathering"
+            }
+        },
         "end-points": {
             "title": "Endpoints Tassadapi",
             "description": "Documentation des endpoints exposés de Tassadapi, comprenant les méthodes, query strings et corps de requête",
@@ -275,25 +294,24 @@
                     "title": "Confirm reset password",
                     "description": "Les mots de passe doivent corresponse et être valides (8 caractères, au moins 1 minuscule, 1 majuscule, 1 chiffre and 1 caractère spécial). Le token est celui reçu demail le token du mail (dans l'url)."
                 }
-            }
-        },
-        "models": {
-            "title": "Modèles",
-            "description": "Les modèles sont les objets retournés par Tassadapi",
-            "language": {
-                "description": "La langue est le modèle de base pour tous les modèles traduits"
             },
-            "category": {
-                "description": "Les catégories sont des regroupements de cartes au sein d'un deck"
+            "terms-and-conditions": {
+                "title": "Conditions générales d'utilisation",
+                "accept": {
+                    "title": "Accepter les conditions générales d'utilisation",
+                    "description": "Fait accepter les conditions générales d'utilisation à l'utilisateur."
+                }
             },
-            "set": {
-                "description": "Les éditions sont les éditions officielles de Magic: the Gathering"
-            },
-            "card": {
-                "description": "Carte regroupant les propriétés communes à travers les éditions des cartes de Magic: the Gathering"
-            },
-            "card-light": {
-                "description": "Version allégée sans <span class=\"font-bold\">CardPrint</span>. Carte regroupant les propriétés communes à travers les éditions des cartes de Magic: the Gathering"
+            "profile": {
+                "title": "Profil",
+                "get": {
+                    "title": "Récupération du profil",
+                    "description": "Retourne un <span class=\"font-bold\">User</span>."
+                },
+                "update": {
+                    "title": "Mise à jour du profil",
+                    "description": "Met à jour le profil de l'utilisateur. Retourne un <span class=\"font-bold\">User</span>."
+                }
             }
         }
     }

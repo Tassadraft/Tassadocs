@@ -42,6 +42,8 @@
     import Auth from './lib/tassadapi/endpoints/Auth.svelte';
     import Contact from './lib/tassadapi/endpoints/Contact.svelte';
     import ResetPassword from './lib/tassadapi/endpoints/ResetPassword.svelte';
+    import TermsAndConditionsEndpoint from './lib/tassadapi/endpoints/TermsAndConditions.svelte';
+    import Profile from './lib/tassadapi/endpoints/Profile.svelte';
 
     export let url = '';
 </script>
@@ -91,6 +93,8 @@
                 <Route path="/tassadapi/end-points/auth"><Auth /></Route>
                 <Route path="/tassadapi/end-points/contact"><Contact /></Route>
                 <Route path="/tassadapi/end-points/reset-password"><ResetPassword /></Route>
+                <Route path="/tassadapi/end-points/terms-and-conditions"><TermsAndConditionsEndpoint /></Route>
+                <Route path="/tassadapi/end-points/profile"><Profile /></Route>
 
                 <Route path="*"><NotFound /></Route>
             </Router>

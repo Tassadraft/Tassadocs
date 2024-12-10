@@ -234,6 +234,25 @@
     },
     "tassadapi": {
         "title": "Tassadapi",
+        "models": {
+            "title": "Models",
+            "description": "Models are Tassadapi's returned objects",
+            "language": {
+                "description": "Language is the base model for all translated models"
+            },
+            "category": {
+                "description": "Categories are card groups inside a deck"
+            },
+            "set": {
+                "description": "Sets are the official Magic:the Gathering sets"
+            },
+            "card": {
+                "description": "Carte gathering common properties across Magic: the Gathering card prints"
+            },
+            "card-light": {
+                "description": "Reduced version without <span class=\"font-bold\">CardPrint</span> array. Carte gathering common properties across Magic: the Gathering card prints"
+            }
+        },
         "end-points": {
             "title": "Tassadapi endpoints",
             "description": "Tassadapi exposed endpoints documentation including methods, query strings, bodies",
@@ -275,25 +294,24 @@
                     "title": "Confirm reset password",
                     "description": "Passwords have to match and be valid (8 characters, at least 1 uppercase, 1 lowercase, 1 number and 1 special character). The token is the received token from the email's token (in the uri)."
                 }
-            }
-        },
-        "models": {
-            "title": "Models",
-            "description": "Models are Tassadapi's returned objects",
-            "language": {
-                "description": "Language is the base model for all translated models"
             },
-            "category": {
-                "description": "Categories are card groups inside a deck"
+            "terms-and-conditions": {
+                "title": "Terms and conditions",
+                "accept": {
+                    "title": "Accept terms and conditions",
+                    "description": "Make user agree to terms and conditions."
+                }
             },
-            "set": {
-                "description": "Sets are the official Magic:the Gathering sets"
-            },
-            "card": {
-                "description": "Carte gathering common properties across Magic: the Gathering card prints"
-            },
-            "card-light": {
-                "description": "Reduced version without <span class=\"font-bold\">CardPrint</span> array. Carte gathering common properties across Magic: the Gathering card prints"
+            "profile": {
+                "title": "Profile",
+                "get": {
+                    "title": "Get profile",
+                    "description": "Returns a <span class=\"font-bold\">User</span>."
+                },
+                "update": {
+                    "title": "Update profile",
+                    "description": "Updates user's profile. Returns a <span class=\"font-bold\">User</span>."
+                }
             }
         }
     }

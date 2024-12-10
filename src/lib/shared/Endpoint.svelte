@@ -76,8 +76,8 @@
             <SubSubtitle>{$t('end-point.body')}</SubSubtitle>
             <div class="bg-gray-950 p-2">
                 <p class="text-white">{'{'}</p>
-                {#each Object.keys(body) as key}
-                    <p class="ml-3 text-white">{key}: <span class="text-primary-500">{@html body[key]}</span>,</p>
+                {#each Object.keys(body) as key, index}
+                    <p class="ml-3 text-white">{key}: <span class="text-primary-500">{@html body[key]}</span>{Object.keys(body).length - 1 === index ? '' : ','}</p>
                 {/each}
                 <p class="text-white">{'}'}</p>
             </div>
@@ -110,14 +110,14 @@
         <div class="bg-gray-950 p-2">
             {#if Array.isArray(response)}
                 <p class="text-white">{'['}</p>
-                {#each response as value}
-                    <p class="ml-3 text-white">{@html value},</p>
+                {#each response as value, index}
+                    <p class="ml-3 text-white">{@html value}{response.length - 1 === index ? '' : ','}</p>
                 {/each}
                 <p class="text-white">{']'}</p>
             {:else}
                 <p class="text-white">{'{'}</p>
-                {#each Object.keys(response) as key}
-                    <p class="ml-3 text-white">{key}: <span class="text-primary-500">{@html response[key]}</span>,</p>
+                {#each Object.keys(response) as key, index}
+                    <p class="ml-3 text-white">{key}: <span class="text-primary-500">{@html response[key]}</span>{Object.keys(response).length - 1 === index ? '' : ','}</p>
                 {/each}
                 <p class="text-white">{'}'}</p>
             {/if}

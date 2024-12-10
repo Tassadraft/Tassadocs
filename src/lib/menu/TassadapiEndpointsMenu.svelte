@@ -22,8 +22,12 @@
             </div>
             <Panel>
                 <MenuItem iconLeft="shield" href="/tassadapi/end-points/auth">{$t('tassadapi.end-points.auth.title')}</MenuItem>
-                <MenuItem iconLeft="pen" href="/tassadapi/end-points/contact">{$t('tassadapi.end-points.contact.title')}</MenuItem>
                 <MenuItem iconLeft="password" href="/tassadapi/end-points/reset-password">{$t('tassadapi.end-points.reset-password.title')}</MenuItem>
+                <MenuItem iconLeft="user" href="/tassadapi/end-points/profile">{$t('tassadapi.end-points.profile.title')}</MenuItem>
+            </Panel>
+            <Panel>
+                <MenuItem iconLeft="pen" href="/tassadapi/end-points/contact">{$t('tassadapi.end-points.contact.title')}</MenuItem>
+                <MenuItem iconLeft="password" href="/tassadapi/end-points/terms-and-conditions">{$t('tassadapi.end-points.terms-and-conditions.title')}</MenuItem>
             </Panel>
         </div>
     </div>
