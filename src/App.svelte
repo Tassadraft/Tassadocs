@@ -38,6 +38,10 @@
     import DeckCardRelatedCardPrint from './lib/tassadapi/models/DeckCardRelatedCardPrint.svelte';
     import DeckCategory from './lib/tassadapi/models/DeckCategory.svelte';
     import User from './lib/tassadapi/models/User.svelte';
+    import AccessToken from './lib/tassadapi/models/AccessToken.svelte';
+    import Auth from './lib/tassadapi/endpoints/Auth.svelte';
+    import Contact from './lib/tassadapi/endpoints/Contact.svelte';
+    import ResetPassword from './lib/tassadapi/endpoints/ResetPassword.svelte';
 
     export let url = '';
 </script>
@@ -80,9 +84,13 @@
                 <Route path="/tassadapi/models/deck-card-related-card-print"><DeckCardRelatedCardPrint /></Route>
                 <Route path="/tassadapi/models/deck-category"><DeckCategory /></Route>
                 <Route path="/tassadapi/models/user"><User /></Route>
+                <Route path="/tassadapi/models/access-token"><AccessToken /></Route>
 
                 <!-- Models documentation part -->
                 <Route path="/tassadapi/end-points"><TassadapiEndpoints /></Route>
+                <Route path="/tassadapi/end-points/auth"><Auth /></Route>
+                <Route path="/tassadapi/end-points/contact"><Contact /></Route>
+                <Route path="/tassadapi/end-points/reset-password"><ResetPassword /></Route>
 
                 <Route path="*"><NotFound /></Route>
             </Router>

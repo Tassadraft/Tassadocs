@@ -1,9 +1,6 @@
 <script>
-    import Title from '../shared/Title.svelte';
     import { t } from 'svelte-i18n';
-    import RetractableMenu from '../menu/RetractableMenu.svelte';
+    import TassadapiEndpointsMenu from '../menu/TassadapiEndpointsMenu.svelte';
 </script>
 
-<RetractableMenu />
-
-<Title title={$t('tassadapi.end-points.title')} />
+<TassadapiEndpointsMenu title={$t('tassadapi.end-points.title')} description={$t('tassadapi.end-points.description')} />

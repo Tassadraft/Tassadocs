@@ -36,6 +36,9 @@
         'Label',
         'Stack',
         'Feature',
+        'Shield',
+        'Password',
+        'Pen',
     ];
 
     const toCamelCase = (str) => {

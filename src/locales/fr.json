@@ -11,6 +11,8 @@
         "value": "Valeur(s)",
         "field": "Champ",
         "type": "Type",
+        "logged": "Connecté",
+        "subscribed": "Abonné",
         "language": "Language",
         "build": "Build",
         "category": "Category",
@@ -37,7 +39,8 @@
         "deck-card": "Deck card",
         "deck-card-related-card-print": "Deck card related card print",
         "deck-category": "Deck category",
-        "user": "User"
+        "user": "User",
+        "access-token": "Access token"
     },
     "toast": {
         "copy": {
@@ -60,7 +63,8 @@
             "required": "Query strings requis",
             "optional": "Query strings optionnels"
         },
-        "body": "Corps de requête"
+        "body": "Corps de requête",
+        "response": "Réponse"
     },
     "legals": {
         "title": "Mentions Légales",
@@ -232,7 +236,46 @@
         "title": "Tassadapi",
         "end-points": {
             "title": "Endpoints Tassadapi",
-            "description": "Documentation des endpoints exposés de Tassadapi, comprenant les méthodes, query strings et corps de requête"
+            "description": "Documentation des endpoints exposés de Tassadapi, comprenant les méthodes, query strings et corps de requête",
+            "auth": {
+                "title": "Authentification",
+                "description": "Pour être authentifié sur Tassadapi, un token d'<span class=\"font-bold\">Access token</span>valid doit être utilisé comme bearer token.\n\nCela signifie qu'un header \"Authorization\": `Bearer ${token}` doit être configuré dans la requête.",
+                "login": {
+                    "title": "Connexion",
+                    "description": "Envoyer le nom d'utilisateur et le mot de passe en clair.\n\nRetourne le bearer token en cas de succès."
+                },
+                "auth-check": {
+                    "title": "Vérification de l'authentification",
+                    "description": "Vérifie l'authentification : En cas de succès, l'utilisateur est connecté. Mais si la requête échoue, l'utilisateur ne l'est pas."
+                },
+                "logout": {
+                    "title": "Déconnexion",
+                    "description": "Déconnecte l'utilisateur en révoquant son <span class=\"font-bold\">Access token</span>."
+                }
+            },
+            "contact": {
+                "title": "Contact",
+                "description": "Requêtes associées au formulaire de contact, pour faire remonter différentes choses de façon automatique.",
+                "subjects": {
+                    "title": "Sujets du formulaire de contact",
+                    "description": "Renvoie un tableau de valeurs : vous pouvez associer vos propres labels à ces valeurs. La veleur sélectionnée devra être envoyée avec le formulaire."
+                },
+                "post": {
+                    "title": "Poster le formulaire de contact",
+                    "description": "Subjects doit être une des valeurs de <span class=\"italic\">/contact/subjects</span>. Le message est libre, et le consentement doit être à true pour permettre au serveur d'enregistrer le message."
+                }
+            },
+            "reset-password": {
+                "title": "Réinitialisation du mot de passe",
+                "send": {
+                    "title": "Envoyer un mail de réinitialisation du mot de passe",
+                    "description": "Envoie un mail à l'email renseigné. Ce mail contient un lien (son url de base est le frontUri renseigné concaténé avec \"/${token}\")."
+                },
+                "confirm": {
+                    "title": "Confirm reset password",
+                    "description": "Les mots de passe doivent corresponse et être valides (8 caractères, au moins 1 minuscule, 1 majuscule, 1 chiffre and 1 caractère spécial). Le token est celui reçu demail le token du mail (dans l'url)."
+                }
+            }
         },
         "models": {
             "title": "Modèles",

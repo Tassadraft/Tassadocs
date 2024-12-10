@@ -11,8 +11,6 @@
     export let description = '';
 </script>
 
-<Subtitle>{$t('menu.models')}</Subtitle>
-
 <ApiDocMenu>
     <div slot="menu">
         <MenuItem iconLeft="home" href="/">{$t('menu.home')}</MenuItem>
@@ -27,6 +25,11 @@
                 <MenuItem iconLeft="package" href="/tassadapi/models/set">{$t('common.set')}</MenuItem>
             </Panel>
             <Panel>
+                <MenuItem iconLeft="user" href="/tassadapi/models/user">{$t('common.user')}</MenuItem>
+                <MenuItem iconLeft="link" href="/tassadapi/models/access-token">{$t('common.access-token')}</MenuItem>
+                <MenuItem iconLeft="mastercard" href="/tassadapi/models/subscription">{$t('common.subscription')}</MenuItem>
+            </Panel>
+            <Panel>
                 <MenuItem iconLeft="card" href="/tassadapi/models/card">{$t('common.card')}</MenuItem>
                 <MenuItem iconLeft="card" href="/tassadapi/models/card-light">{$t('common.card-light')}</MenuItem>
                 <MenuItem iconLeft="gavel" href="/tassadapi/models/card-legality">{$t('common.card-legality')}</MenuItem>
@@ -39,15 +42,6 @@
                 <MenuItem iconLeft="language" href="/tassadapi/models/card-print-translation">{$t('common.card-print-translation')}</MenuItem>
             </Panel>
             <Panel>
-                <MenuItem iconLeft="package" href="/tassadapi/models/subscription-product">{$t('common.subscription-product')}</MenuItem>
-                <MenuItem iconLeft="language" href="/tassadapi/models/subscription-product-translation">{$t('common.subscription-product-translation')}</MenuItem>
-                <MenuItem iconLeft="feature" href="/tassadapi/models/subscription-product-translation-feature">{$t('common.subscription-product-translation-feature')}</MenuItem>
-            </Panel>
-            <Panel>
-                <MenuItem iconLeft="github" href="/tassadapi/models/github-repository">{$t('common.github-repository')}</MenuItem>
-                <MenuItem iconLeft="label" href="/tassadapi/models/github-repository-label">{$t('common.github-repository-label')}</MenuItem>
-            </Panel>
-            <Panel>
                 <MenuItem iconLeft="stack" href="/tassadapi/models/deck">{$t('common.deck')}</MenuItem>
                 <MenuItem iconLeft="stack" href="/tassadapi/models/deck-light">{$t('common.deck-light')}</MenuItem>
                 <MenuItem iconLeft="list" href="/tassadapi/models/deck-category">{$t('common.deck-category')}</MenuItem>
@@ -56,8 +50,13 @@
                 <MenuItem iconLeft="link" href="/tassadapi/models/deck-card-related-card-print">{$t('common.deck-card-related-card-print')}</MenuItem>
             </Panel>
             <Panel>
-                <MenuItem iconLeft="user" href="/tassadapi/models/user">{$t('common.user')}</MenuItem>
-                <MenuItem iconLeft="mastercard" href="/tassadapi/models/subscription">{$t('common.subscription')}</MenuItem>
+                <MenuItem iconLeft="package" href="/tassadapi/models/subscription-product">{$t('common.subscription-product')}</MenuItem>
+                <MenuItem iconLeft="language" href="/tassadapi/models/subscription-product-translation">{$t('common.subscription-product-translation')}</MenuItem>
+                <MenuItem iconLeft="feature" href="/tassadapi/models/subscription-product-translation-feature">{$t('common.subscription-product-translation-feature')}</MenuItem>
+            </Panel>
+            <Panel>
+                <MenuItem iconLeft="github" href="/tassadapi/models/github-repository">{$t('common.github-repository')}</MenuItem>
+                <MenuItem iconLeft="label" href="/tassadapi/models/github-repository-label">{$t('common.github-repository-label')}</MenuItem>
             </Panel>
         </div>
     </div>

@@ -11,6 +11,8 @@
         "value": "Value(s)",
         "field": "Field",
         "type": "Type",
+        "logged": "Logged",
+        "subscribed": "Subscribed",
         "language": "Language",
         "build": "Build",
         "category": "Category",
@@ -37,7 +39,8 @@
         "deck-card": "Deck card",
         "deck-card-related-card-print": "Deck card related card print",
         "deck-category": "Deck category",
-        "user": "User"
+        "user": "User",
+        "access-token": "Access token"
     },
     "toast": {
         "copy": {
@@ -60,7 +63,8 @@
             "required": "Required query strings",
             "optional": "Optional query strings"
         },
-        "body": "Body"
+        "body": "Body",
+        "response": "Response"
     },
     "legals": {
         "title": "Legal Notice",
@@ -232,7 +236,46 @@
         "title": "Tassadapi",
         "end-points": {
             "title": "Tassadapi endpoints",
-            "description": "Tassadapi exposed endpoints documentation including methods, query strings, bodies"
+            "description": "Tassadapi exposed endpoints documentation including methods, query strings, bodies",
+            "auth": {
+                "title": "Authentication",
+                "description": "To be authenticated on Tassadapi, a valid <span class=\"font-bold\">Access token</span>'s token has to be used as bearer token.\n\nThat means that a \"Authorization\": `Bearer ${token}` header has to be configured into the request.",
+                "login": {
+                    "title": "Login",
+                    "description": "Send username and clear password.\n\nReturns the bearer token in case of success."
+                },
+                "auth-check": {
+                    "title": "Authentication check",
+                    "description": "Checks authentication : if success, then user is connected. But request will fail if user is not connected."
+                },
+                "logout": {
+                    "title": "Logout",
+                    "description": "Logs out user by revoking his <span class=\"font-bold\">Access token</span>."
+                }
+            },
+            "contact": {
+                "title": "Contact",
+                "description": "Requests associated to contact form, to automatically flag different things.",
+                "subjects": {
+                    "title": "Contact form subjects",
+                    "description": "Sends an array of values : you can put you own labels associated to those values. The selected value will have to be sent with the form."
+                },
+                "post": {
+                    "title": "Post contact form",
+                    "description": "Subjects has to be one of <span class=\"italic\">/contact/subjects</span>'s values. Message of free, and consent has to be set to true to allow the server to save the message."
+                }
+            },
+            "reset-password": {
+                "title": "Reset password",
+                "send": {
+                    "title": "Send reset password email",
+                    "description": "Sends an mail to the given email. This email contains a link (its base uri is the given frontUri concatenated with \"/${token}\")."
+                },
+                "confirm": {
+                    "title": "Confirm reset password",
+                    "description": "Passwords have to match and be valid (8 characters, at least 1 uppercase, 1 lowercase, 1 number and 1 special character). The token is the received token from the email's token (in the uri)."
+                }
+            }
         },
         "models": {
             "title": "Models",
@@ -250,7 +293,7 @@
                 "description": "Carte gathering common properties across Magic: the Gathering card prints"
             },
             "card-light": {
-                "description": "Lighten version without <span class=\"font-bold\">CardPrint</span> array. Carte gathering common properties across Magic: the Gathering card prints"
+                "description": "Reduced version without <span class=\"font-bold\">CardPrint</span> array. Carte gathering common properties across Magic: the Gathering card prints"
             }
         }
     }

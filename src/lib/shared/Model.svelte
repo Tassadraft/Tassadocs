@@ -13,11 +13,11 @@
 <Panel>
     <div class="flex flex-col gap-3 mt-3">
         <div class="bg-gray-950 p-2">
-            <p class="text-white">{`{`}</p>
+            <p class="text-white">{'{'}</p>
             {#each Object.keys(model) as key}
                 <p class="ml-3 text-white">{key}: <span class="text-primary-500">{@html model[key]}</span>,</p>
             {/each}
-            <p class="text-white">{`}`}</p>
+            <p class="text-white">{'}'}</p>
         </div>
         <table class="border-t border-x border-gray-500">
             <tr class="border-b border-gray-500">
