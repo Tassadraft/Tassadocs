@@ -73,15 +73,21 @@
         </div>
     </div>
     <div slot="content">
-        <div class="flex justify-between">
+        <div class="flex gap-3 justify-between flex-wrap">
             <Title {title} />
             <div class="flex gap-10 items-center">
-                <div class="flex gap-10 mb-2">
-                    <Switch bind:value={isLogged} size={4} label={$t('common.logged')} on:change={handleLoggedChanged} />
-                    <Switch bind:value={isSubscribed} size={4} label={$t('common.subscribed')} on:change={handleSubscribedChanged} />
-                    <ThemeSwitch />
+                <div class="flex flex-wrap gap-10 mb-2">
+                    <div class="flex gap-10">
+                        <Switch bind:value={isLogged} size={4} label={$t('common.logged')} on:change={handleLoggedChanged} />
+                        <Switch bind:value={isSubscribed} size={4} label={$t('common.subscribed')} on:change={handleSubscribedChanged} />
+                    </div>
+                    <div class="flex gap-10">
+                        <ThemeSwitch />
+                        <div class="mt-1">
+                            <FlagMenu />
+                        </div>
+                    </div>
                 </div>
-                <FlagMenu />
             </div>
         </div>
 
