@@ -77,9 +77,9 @@
             <Title {title} />
             <div class="flex gap-10 items-center">
                 <div class="flex gap-10 mb-2">
-                    <ThemeSwitch />
                     <Switch bind:value={isLogged} size={4} label={$t('common.logged')} on:change={handleLoggedChanged} />
                     <Switch bind:value={isSubscribed} size={4} label={$t('common.subscribed')} on:change={handleSubscribedChanged} />
+                    <ThemeSwitch />
                 </div>
                 <FlagMenu />
             </div>

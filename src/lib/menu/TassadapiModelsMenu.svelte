@@ -7,6 +7,8 @@
     import Panel from '../shared/Panel.svelte';
     import Subtitle from '../shared/Subtitle.svelte';
     import { raw } from '../../service/stringService.js';
+    import Switch from '../shared/Switch.svelte';
+    import ThemeSwitch from '../shared/ThemeSwitch.svelte';
 
     export let title;
     export let description = '';
@@ -64,7 +66,12 @@
     <div slot="content">
         <div class="flex justify-between">
             <Title {title} />
-            <FlagMenu />
+            <div class="flex gap-10 items-center">
+                <div class="flex gap-10 mb-2">
+                    <ThemeSwitch />
+                </div>
+                <FlagMenu />
+            </div>
         </div>
 
         {#if description}
