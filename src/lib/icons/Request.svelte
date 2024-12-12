@@ -3,7 +3,7 @@
     export let className = '';
 </script>
 
-<svg class={className} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill="currentColor" viewBox="0 0 24 24">
+<svg class={className} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill="currentColor" viewBox="0 0 16 16">
     <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
         <circle cx="12.5" cy="12.5" r="1.75" />
         <circle cx="3.5" cy="12.5" r="1.75" />

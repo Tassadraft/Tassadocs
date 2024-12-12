@@ -14,7 +14,7 @@
             enabled: 'boolean',
             enableDetailedCategories: 'boolean',
             format: 'string',
-            owner: 'string (owner\'s username)',
+            owner: `<span class="font-bold">${$t('common.user')}</span>`,
             categories: `<span class="font-bold">${$t('common.deck-category')}</span> []`,
         }}
     />

@@ -2,7 +2,6 @@
     import { Router, Route } from 'svelte-routing';
     import Homepage from './lib/pages/Home.svelte';
     import NotFound from './lib/pages/NotFound.svelte';
-    import Legals from './lib/pages/Legals.svelte';
     import TermsAndConditions from './lib/pages/TermsAndConditions.svelte';
     import Footer from './lib/shared/Footer.svelte';
     import Tassadapi from './lib/pages/Tassadapi.svelte';
@@ -23,8 +22,6 @@
     import SubscriptionProductTranslation from './lib/tassadapi/models/SubscriptionProductTranslation.svelte';
     import Subscription from './lib/tassadapi/models/Subscription.svelte';
     import SubscriptionProduct from './lib/tassadapi/models/SubscriptionProduct.svelte';
-    import GithubRepositoryLabel from './lib/tassadapi/models/GithubRepositoryLabel.svelte';
-    import GithubRepository from './lib/tassadapi/models/GithubRepository.svelte';
     import CardPrint from './lib/tassadapi/models/CardPrint.svelte';
     import CardPrintFace from './lib/tassadapi/models/CardPrintFace.svelte';
     import CardPrintImageUri from './lib/tassadapi/models/CardPrintImageUri.svelte';
@@ -38,6 +35,21 @@
     import DeckCardRelatedCardPrint from './lib/tassadapi/models/DeckCardRelatedCardPrint.svelte';
     import DeckCategory from './lib/tassadapi/models/DeckCategory.svelte';
     import User from './lib/tassadapi/models/User.svelte';
+    import AccessToken from './lib/tassadapi/models/AccessToken.svelte';
+    import Auth from './lib/tassadapi/endpoints/Auth.svelte';
+    import Contact from './lib/tassadapi/endpoints/Contact.svelte';
+    import ResetPassword from './lib/tassadapi/endpoints/ResetPassword.svelte';
+    import TermsAndConditionsEndpoint from './lib/tassadapi/endpoints/TermsAndConditions.svelte';
+    import Profile from './lib/tassadapi/endpoints/Profile.svelte';
+    import Subscribed from './lib/tassadapi/endpoints/Subscribed.svelte';
+    import DeckEndpoint from './lib/tassadapi/endpoints/Deck.svelte';
+    import Processing from './lib/tassadapi/endpoints/Processing.svelte';
+    import ProcessedCard from './lib/tassadapi/models/ProcessedCard.svelte';
+    import LegalNotice from './lib/pages/LegalNotice.svelte';
+    import CardSearch from './lib/tassadapi/endpoints/CardSearch.svelte';
+    import CardPrintEndpoint from './lib/tassadapi/endpoints/CardPrint.svelte';
+    import NewDeck from './lib/tassadapi/endpoints/NewDeck.svelte';
+    import EditDeck from './lib/tassadapi/endpoints/EditDeck.svelte';
 
     export let url = '';
 </script>
@@ -47,7 +59,7 @@
         {#if !$isLoading}
             <Router {url}>
                 <Route path="/"><Homepage /></Route>
-                <Route path="/legals"><Legals /></Route>
+                <Route path="/legal-notice"><LegalNotice /></Route>
                 <Route path="/terms-and-conditions"><TermsAndConditions /></Route>
                 <Route path="/tassadapi"><Tassadapi /></Route>
 
@@ -68,21 +80,33 @@
                 <Route path="/tassadapi/models/card-print-purchase-uri"><CardPrintPurchaseUri /></Route>
                 <Route path="/tassadapi/models/card-print-related-uri"><CardPrintRelatedUri /></Route>
                 <Route path="/tassadapi/models/card-print-translation"><CardPrintTranslation /></Route>
+                <Route path="/tassadapi/models/processed-card"><ProcessedCard /></Route>
                 <Route path="/tassadapi/models/subscription-product-translation-feature"><SubscriptionProductTranslationFeature /></Route>
                 <Route path="/tassadapi/models/subscription-product-translation"><SubscriptionProductTranslation /></Route>
                 <Route path="/tassadapi/models/subscription-product"><SubscriptionProduct /></Route>
                 <Route path="/tassadapi/models/subscription"><Subscription /></Route>
-                <Route path="/tassadapi/models/github-repository"><GithubRepository /></Route>
-                <Route path="/tassadapi/models/github-repository-label"><GithubRepositoryLabel /></Route>
                 <Route path="/tassadapi/models/deck"><Deck /></Route>
                 <Route path="/tassadapi/models/deck-light"><DeckLight /></Route>
                 <Route path="/tassadapi/models/deck-card"><DeckCard /></Route>
                 <Route path="/tassadapi/models/deck-card-related-card-print"><DeckCardRelatedCardPrint /></Route>
                 <Route path="/tassadapi/models/deck-category"><DeckCategory /></Route>
                 <Route path="/tassadapi/models/user"><User /></Route>
+                <Route path="/tassadapi/models/access-token"><AccessToken /></Route>
 
                 <!-- Models documentation part -->
                 <Route path="/tassadapi/end-points"><TassadapiEndpoints /></Route>
+                <Route path="/tassadapi/end-points/auth"><Auth /></Route>
+                <Route path="/tassadapi/end-points/contact"><Contact /></Route>
+                <Route path="/tassadapi/end-points/reset-password"><ResetPassword /></Route>
+                <Route path="/tassadapi/end-points/terms-and-conditions"><TermsAndConditionsEndpoint /></Route>
+                <Route path="/tassadapi/end-points/profile"><Profile /></Route>
+                <Route path="/tassadapi/end-points/subscribed"><Subscribed /></Route>
+                <Route path="/tassadapi/end-points/deck"><DeckEndpoint /></Route>
+                <Route path="/tassadapi/end-points/new-deck"><NewDeck /></Route>
+                <Route path="/tassadapi/end-points/edit-deck"><EditDeck /></Route>
+                <Route path="/tassadapi/end-points/processing"><Processing /></Route>
+                <Route path="/tassadapi/end-points/card/search"><CardSearch /></Route>
+                <Route path="/tassadapi/end-points/card/print"><CardPrintEndpoint /></Route>
 
                 <Route path="*"><NotFound /></Route>
             </Router>

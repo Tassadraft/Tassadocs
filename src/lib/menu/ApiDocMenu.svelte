@@ -35,10 +35,7 @@
 
 <div class="flex">
     {#if !$isMobile}
-        <nav id="menu" class="w-80 h-full dark:bg-gray-800 flex-shrink-0">
-            <div class="p-4">
-                <ThemeSwitch />
-            </div>
+        <nav id="menu" class="w-80 dark:bg-gray-800">
             <slot name="menu" />
         </nav>
     {/if}
