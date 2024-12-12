@@ -52,7 +52,7 @@
                 <IconButton icon="close" on:click={closeMenu} />
             </div>
 
-            <CommonMenu />
+            <CommonMenu retractable={true} />
         </nav>
     </div>
     <FlagMenu />

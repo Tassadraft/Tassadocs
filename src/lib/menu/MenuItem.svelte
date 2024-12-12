@@ -7,6 +7,7 @@
     export let iconLeft = '';
     export let iconRight = 'chevronRight';
     export let footer = false;
+    export let retractable = false;
     export let target = '';
 
     let notClickable = true;
@@ -22,11 +23,11 @@
     <div class="text-primary-500 left">
         <Icon name={iconLeft} />
     </div>
-    <p class="{footer ? '' : 'text-gray-800 text-xl'} p-2">
+    <p class="{footer ? '' : `${retractable ? 'text-white' : 'text-gray-800'} text-xl`} p-2">
         <slot />
     </p>
     {#if iconRight}
-        <div class="flex text-gray-700 dark:text-white right">
+        <div class="flex {footer ? 'text-gray-700' : ''} dark:text-white right">
             <Icon name={iconRight} />
         </div>
     {/if}
