@@ -6,14 +6,16 @@
     import Title from '../shared/Title.svelte';
     import Panel from '../shared/Panel.svelte';
     import Subtitle from '../shared/Subtitle.svelte';
+    import { raw } from '../../service/stringService.js';
 
     export let title;
     export let description = '';
 </script>
 
 <ApiDocMenu>
-    <div slot="menu">
+    <div slot="menu" class="mt-3">
         <MenuItem iconLeft="home" href="/">{$t('menu.home')}</MenuItem>
+        <MenuItem iconLeft="request" href="/tassadapi/end-points">{$t('menu.end-points')}</MenuItem>
         <div class="mt-3">
             <div class="m-3">
                 <Subtitle>{$t('menu.models')}</Subtitle>
@@ -42,6 +44,9 @@
                 <MenuItem iconLeft="language" href="/tassadapi/models/card-print-translation">{$t('common.card-print-translation')}</MenuItem>
             </Panel>
             <Panel>
+                <MenuItem iconLeft="card" href="/tassadapi/models/processed-card">{$t('common.processed-card')}</MenuItem>
+            </Panel>
+            <Panel>
                 <MenuItem iconLeft="stack" href="/tassadapi/models/deck">{$t('common.deck')}</MenuItem>
                 <MenuItem iconLeft="stack" href="/tassadapi/models/deck-light">{$t('common.deck-light')}</MenuItem>
                 <MenuItem iconLeft="list" href="/tassadapi/models/deck-category">{$t('common.deck-category')}</MenuItem>
@@ -54,10 +59,6 @@
                 <MenuItem iconLeft="language" href="/tassadapi/models/subscription-product-translation">{$t('common.subscription-product-translation')}</MenuItem>
                 <MenuItem iconLeft="feature" href="/tassadapi/models/subscription-product-translation-feature">{$t('common.subscription-product-translation-feature')}</MenuItem>
             </Panel>
-            <Panel>
-                <MenuItem iconLeft="github" href="/tassadapi/models/github-repository">{$t('common.github-repository')}</MenuItem>
-                <MenuItem iconLeft="label" href="/tassadapi/models/github-repository-label">{$t('common.github-repository-label')}</MenuItem>
-            </Panel>
         </div>
     </div>
     <div slot="content">
@@ -68,7 +69,7 @@
 
         {#if description}
             <Panel>
-                <p>{@html description}</p>
+                <p>{@html raw(description)}</p>
             </Panel>
         {/if}
         <slot />

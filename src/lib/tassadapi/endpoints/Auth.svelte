@@ -2,9 +2,11 @@
     import { t } from 'svelte-i18n';
     import TassadapiEndpointsMenu from '../../menu/TassadapiEndpointsMenu.svelte';
     import Endpoint from '../../shared/Endpoint.svelte';
+
+    let isLogged = false;
 </script>
 
-<TassadapiEndpointsMenu title={$t('tassadapi.end-points.auth.title')} description={$t('tassadapi.end-points.auth.description')}>
+<TassadapiEndpointsMenu title={$t('tassadapi.end-points.auth.title')} description={$t('tassadapi.end-points.auth.description')} bind:isLogged>
     <div class="flex flex-col gap-3">
         <Endpoint
             title={$t('tassadapi.end-points.auth.login.title')}
@@ -30,6 +32,7 @@
                 sessionTokenIsValid: true
             }}
             logged={true}
+            bind:isLogged
         />
 
         <Endpoint
@@ -41,6 +44,7 @@
                 revoked: true
             }}
             logged={true}
+            bind:isLogged
         />
     </div>
 </TassadapiEndpointsMenu>

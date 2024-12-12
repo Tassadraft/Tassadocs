@@ -32,8 +32,6 @@
         'Link',
         'ArrowLeft',
         'Price',
-        'Github',
-        'Label',
         'Stack',
         'Feature',
         'Shield',

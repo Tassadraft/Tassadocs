@@ -5,12 +5,15 @@
         "tassadecks": "Tassadecks",
         "tassadapi": "Tassadapi",
         "back-to-home": "Back to home",
+        "contact": "Contact",
         "yes": "Yes",
         "no": "No",
         "name": "Name",
         "value": "Value(s)",
+        "fallback": "Fallback",
         "field": "Field",
         "type": "Type",
+        "status": "Status",
         "logged": "Logged",
         "subscribed": "Subscribed",
         "language": "Language",
@@ -40,7 +43,8 @@
         "deck-card-related-card-print": "Deck card related card print",
         "deck-category": "Deck category",
         "user": "User",
-        "access-token": "Access token"
+        "access-token": "Access token",
+        "processed-card": "Processed card"
     },
     "toast": {
         "copy": {
@@ -50,7 +54,7 @@
     "menu": {
         "source-code": "Source code",
         "home": "Home",
-        "legals": "Legals",
+        "legal-notice": "Legal notice",
         "terms-and-conditions": "Terms and conditions",
         "models": "Models",
         "end-points": "Endpoints"
@@ -59,6 +63,7 @@
         "title": "Home"
     },
     "end-point": {
+        "params": "Parameters",
         "query-string": {
             "required": "Required query strings",
             "optional": "Optional query strings"
@@ -66,7 +71,7 @@
         "body": "Body",
         "response": "Response"
     },
-    "legals": {
+    "legal-notice": {
         "title": "Legal Notice",
         "editor": {
             "title": "Editor",
@@ -251,11 +256,14 @@
             },
             "card-light": {
                 "description": "Reduced version without <span class=\"font-bold\">CardPrint</span> array. Carte gathering common properties across Magic: the Gathering card prints"
+            },
+            "processed-card": {
+                "description": "Processed cards are Tassadapi's returned objects after photo's processing (in base64).\n\nThe object is composed of a <span class=\"font-bold\">Card print</span> and a number array : it's the photos' index (starting from 1 and not 0) where this <span class=\"font-bold\">Card print</span> has been found."
             }
         },
         "end-points": {
             "title": "Tassadapi endpoints",
-            "description": "Tassadapi exposed endpoints documentation including methods, query strings, bodies",
+            "description": "Tassadapi exposed endpoints documentation including methods, query strings, bodies and responses",
             "auth": {
                 "title": "Authentication",
                 "description": "To be authenticated on Tassadapi, a valid <span class=\"font-bold\">Access token</span>'s token has to be used as bearer token.\n\nThat means that a \"Authorization\": `Bearer ${token}` header has to be configured into the request.",
@@ -265,7 +273,7 @@
                 },
                 "auth-check": {
                     "title": "Authentication check",
-                    "description": "Checks authentication : if success, then user is connected. But request will fail if user is not connected."
+                    "description": "Checks authentication : if success, then user is connected."
                 },
                 "logout": {
                     "title": "Logout",
@@ -311,6 +319,144 @@
                 "update": {
                     "title": "Update profile",
                     "description": "Updates user's profile. Returns a <span class=\"font-bold\">User</span>."
+                }
+            },
+            "subscribed": {
+                "title": "Subscribed",
+                "description": "Protected route : must be subscribed to access this endpoint group",
+                "check": {
+                    "title": "Check subscription",
+                    "description": "In case of success, user is subscribed. if the request fails, user is either disconnected or not subscribed."
+                }
+            },
+            "deck": {
+                "title": "Deck",
+                "public": {
+                    "title": "Get all public decks",
+                    "description": "Returns paginated object of <span class=\"font-bold\">Decks</span> (including owned <span class=\"font-bold\">Decks</span>)."
+                },
+                "all": {
+                    "title": "All public & owned decks",
+                    "description": "If user is connected, returns separately a paginated object of public <span class=\"font-bold\">Decks</span> (excluding owned <span class=\"font-bold\">Decks</span>) and a paginated object of owned <span class=\"font-bold\">Decks</span>.\n\nReturns public paginated <span class=\"font-bold\">Decks</span> instead."
+                },
+                "me": {
+                    "title": "Owned decks",
+                    "description": "Returns a paginated object of owned <span class=\"font-bold\">Decks</span>."
+                },
+                "get": {
+                    "title": "Get a detailed deck",
+                    "params": {
+                        "deck-id": "<span class=\"font-bold\">Deck</span> id"
+                    }
+                },
+                "delete": {
+                    "title": "Delete a deck",
+                    "params": {
+                        "deck-id": "<span class=\"font-bold\">Deck</span> id"
+                    }
+                },
+                "is-legal": {
+                    "title": "Check a deck's legality",
+                    "params": {
+                        "deck-id": "<span class=\"font-bold\">Deck</span> id"
+                    }
+                }
+            },
+            "new-deck": {
+                "title": "New deck",
+                "formats": {
+                    "title": "Get supported deck formats list",
+                    "description": "Returns an array of strings, that are values to pass during deck creation. You can put your own associated labels."
+                },
+                "new": {
+                    "title": "Create a new deck",
+                    "body": {
+                        "format": "One of the supported formats values"
+                    },
+                    "response": {
+                        "deck-id": "Created <span class=\"font-bold\">Deck</span>'s id"
+                    }
+                }
+            },
+            "edit-deck": {
+                "title": "Edit deck",
+                "params": {
+                    "deck-id": "<span class=\"font-bold\">Deck</span> id"
+                },
+                "metadata": {
+                    "title": "Update metadata",
+                    "description": "Updates deck name, description, and public & enable status."
+                },
+                "add-card": {
+                    "title": "Add a card",
+                    "body": {
+                        "card-id": "Parent <span class=\"font-bold\">Card</span>'s oracleId"
+                    }
+                },
+                "remove-card": {
+                    "title": "Decrement or delete a card",
+                    "body": {
+                        "card-id": "Parent <span class=\"font-bold\">Card</span>'s oracleId"
+                    }
+                },
+                "move-card": {
+                    "title": "Change card category",
+                    "body": {
+                        "card-id": "Parent <span class=\"font-bold\">Card</span>'s oracleId",
+                        "category-id": "<span class=\"font-bold\">Deck category</span> id"
+                    }
+                },
+                "add-category": {
+                    "title": "Add a new category"
+                },
+                "rename-category": {
+                    "title": "Rename a category"
+                },
+                "clear-categories": {
+                    "title": "Clear empty categories"
+                }
+            },
+            "process": {
+                "title": "Photo processing",
+                "card": {
+                    "title": "Send photos for card processing",
+                    "description": "Send an array of photos, in base64. Those photos will be sent to an AI and return an array of found <span class=\"font-bold\">Card prints</span> with their recognized photos, starting from 1 (and not 0)."
+                }
+            },
+            "card": {
+                "search": {
+                    "title": "Card search",
+                    "description": "Returns a paginated <span class=\"font-bold\">Card print</span> object. If multiple <span class=\"font-bold\">Card prints</span> related to the same card are found, only the most recently edited <span class=\"font-bold\">Card print</span> taken for pagination."
+                },
+                "prints": {
+                    "title": "Card prints",
+                    "get": {
+                        "title": "Get card's card prints",
+                        "description": "Returns all target <span class=\"font-bold\">Card</span>'s <span class=\"font-bold\">Card prints</span> into a paginated object.",
+                        "params": {
+                            "card-id": "Parent <span class=\"font-bold\">Card</span>'s oracleId"
+                        }
+                    },
+                    "switch": {
+                        "title": "Switch card print",
+                        "description": "Replace target <span class=\"font-bold\">Deck card</span>'s print by another one.",
+                        "params": {
+                            "card-id": "Parent <span class=\"font-bold\">Deck card</span>'s id"
+                        },
+                        "body": {
+                            "print-id": "New <span class=\"font-bold\">Card print</span>'s scryfallId"
+                        }
+                    },
+                    "switch-related": {
+                        "title": "Switch related deck card's card print",
+                        "description": "Replace all <span class=\"font-bold\">Deck cards</span>' related prints of the <span class=\"font-bold\">Deck</span> from their parent <span class=\"font-bold\">Card</span>.",
+                        "params": {
+                            "deck-id": "<span class=\"font-bold\">Deck</span> id"
+                        },
+                        "body": {
+                            "print-id": "New <span class=\"font-bold\">Card print</span>'s scryfallId"
+                        }
+                    }
                 }
             }
         }

@@ -5,12 +5,15 @@
         "tassadecks": "Tassadecks",
         "tassadapi": "Tassadapi",
         "back-to-home": "Retour à l'accueil",
+        "contact": "Contact",
         "yes": "Oui",
         "no": "Non",
         "name": "Nom",
         "value": "Valeur(s)",
         "field": "Champ",
+        "fallback": "Défaut",
         "type": "Type",
+        "status": "Statut",
         "logged": "Connecté",
         "subscribed": "Abonné",
         "language": "Language",
@@ -40,7 +43,8 @@
         "deck-card-related-card-print": "Deck card related card print",
         "deck-category": "Deck category",
         "user": "User",
-        "access-token": "Access token"
+        "access-token": "Access token",
+        "processed-card": "Carte traitée"
     },
     "toast": {
         "copy": {
@@ -50,7 +54,7 @@
     "menu": {
         "source-code": "Code source",
         "home": "Accueil",
-        "legals": "Mentions légales",
+        "legal-notice": "Mentions légales",
         "terms-and-conditions": "Conditions générales d'utilisation",
         "models": "Modèles",
         "end-points": "Endpoints"
@@ -59,6 +63,7 @@
         "title": "Accueil"
     },
     "end-point": {
+        "params": "Paramètres",
         "query-string": {
             "required": "Query strings requis",
             "optional": "Query strings optionnels"
@@ -66,7 +71,7 @@
         "body": "Corps de requête",
         "response": "Réponse"
     },
-    "legals": {
+    "legal-notice": {
         "title": "Mentions Légales",
         "editor": {
             "title": "Éditeur",
@@ -251,6 +256,9 @@
             },
             "card-light": {
                 "description": "Version allégée sans <span class=\"font-bold\">CardPrint</span>. Carte regroupant les propriétés communes à travers les éditions des cartes de Magic: the Gathering"
+            },
+            "processed-card": {
+                "description": "Les cartes traitées sont les objets retournés par Tassadapi après un traitement de photos (en base64).\n\nL'objet se compose d'une <span class=\"font-bold\">Card print</span> et d'un tableau de numbers : il s'agit des indices des photos envoyées (en partant de 1 et non 0) où cette <span class=\"font-bold\">Card print</span> a été trouvée."
             }
         },
         "end-points": {
@@ -265,7 +273,7 @@
                 },
                 "auth-check": {
                     "title": "Vérification de l'authentification",
-                    "description": "Vérifie l'authentification : En cas de succès, l'utilisateur est connecté. Mais si la requête échoue, l'utilisateur ne l'est pas."
+                    "description": "Vérifie l'authentification : En cas de succès, l'utilisateur est connecté."
                 },
                 "logout": {
                     "title": "Déconnexion",
@@ -292,7 +300,7 @@
                 },
                 "confirm": {
                     "title": "Confirm reset password",
-                    "description": "Les mots de passe doivent corresponse et être valides (8 caractères, au moins 1 minuscule, 1 majuscule, 1 chiffre and 1 caractère spécial). Le token est celui reçu demail le token du mail (dans l'url)."
+                    "description": "Les mots de passe doivent corresponse et être valides (8 caractères, au moins 1 minuscule, 1 majuscule, 1 chiffre and 1 caractère spécial). Le token est celui reçu dans le mail (dans l'url)."
                 }
             },
             "terms-and-conditions": {
@@ -311,6 +319,135 @@
                 "update": {
                     "title": "Mise à jour du profil",
                     "description": "Met à jour le profil de l'utilisateur. Retourne un <span class=\"font-bold\">User</span>."
+                }
+            },
+            "subscribed": {
+                "title": "Abonné",
+                "description": "Route protégée : l'utilisateur doit être abonné pour accéder à ce groupe d'endpoints",
+                "check": {
+                    "title": "Vérifier l'abonnement",
+                    "description": "En cas de succès, l'utilisateur est abonné. Dans le cas contraire, il est soit déconnecté, soit non abonné."
+                }
+            },
+            "deck": {
+                "title": "Decks",
+                "public": {
+                    "title": "Récupérer tous les decks publics",
+                    "description": "Retourne un objet paginé de tous les <span class=\"font-bold\">Decks</span> publics."
+                },
+                "all": {
+                    "title": "Tous les decks publics et détenus",
+                    "description": "Si l'utilisateur est connecté, retourne séparément un objet paginé de tous les <span class=\"font-bold\">Decks</span> publics (à l'exception des <span class=\"font-bold\">Decks</span> détenus) et un objet paginé des <span class=\"font-bold\">Decks</span> détenus.\n\nRetourne uniquement les <span class=\"font-bold\">Decks</span> publics paginés sinon."
+                },
+                "me": {
+                    "title": "Deck détenus",
+                    "description": "Retourne un objet paginé des <span class=\"font-bold\">Decks</span> détenus."
+                },
+                "get": {
+                    "title": "Récupérer un deck détaillé"
+                },
+                "delete": {
+                    "title": "Supprimer un deck"
+                },
+                "is-legal": {
+                    "title": "Vérifier la légalité d'un deck entier"
+                }
+            },
+            "new-deck": {
+                "title": "Nouveau deck",
+                "formats": {
+                    "title": "Récupérer les formats supportés",
+                    "description": "Retourne un tableau de chaînes de caractères, qui sont les valeurs à passer durant la création du deck. Vous pouvez mettre vos propres labels associés à ces formats."
+                },
+                "new": {
+                    "title": "Créer un nouveau deck",
+                    "body": {
+                        "format": "Une des valeurs retournées par les valeurs de formats retournées."
+                    },
+                    "response": {
+                        "deck-id": "Id du <span class=\"font-bold\">Deck</span> créé"
+                    }
+                }
+            },
+            "edit-deck": {
+                "title": "Modifier un deck",
+                "params": {
+                    "deck-id": "Id du <span class=\"font-bold\">Deck</span>"
+                },
+                "metadata": {
+                    "title": "Mise à jour des metadata",
+                    "description": "Met à jour le nom, la description, les statuts public & enabled du deck."
+                },
+                "add-card": {
+                    "title": "Ajouter une carte",
+                    "body": {
+                        "card-id": "Oracle id de la <span class=\"font-bold\">Card</span> mère"
+                    }
+                },
+                "remove-card": {
+                    "title": "Décrémenter ou supprimer une carte",
+                    "body": {
+                        "card-id": "Oracle id de la <span class=\"font-bold\">Card</span> mère"
+                    }
+                },
+                "move-card": {
+                    "title": "Changer une carte de catégorie",
+                    "body": {
+                        "card-id": "Oracle id de la <span class=\"font-bold\">Card</span> mère",
+                        "category-id": "Id de la <span class=\"font-bold\">Deck category</span>"
+                    }
+                },
+                "add-category": {
+                    "title": "Ajouter une nouvelle catégorie"
+                },
+                "rename-category": {
+                    "title": "Renommer une catégorie"
+                },
+                "clear-categories": {
+                    "title": "Supprimer les catégories vides"
+                }
+            },
+            "photo-processing": {
+                "title": "Traitement des photos",
+                "card": {
+                    "title": "Envoyer les photos pour leur traitement",
+                    "description": "Envoyer un tableau de photos en base64. Ces photos seront envoyées à une IA et la requête renvoie un tableau des <span class=\"font-bold\">Card prints</span> trouvés avec les index des photos sur lesquelles elles ont été trouvées, en partant de 1 (et non 0)."
+                }
+            },
+            "card": {
+                "search": {
+                    "title": "Recherche de cartes",
+                    "description": "Retourne un objet paginé de <span class=\"font-bold\">Card prints</span>. Si plusieurs <span class=\"font-bold\">Card prints</span> relatifs à la même carte sont trouvés, Seule l'édition la plus récente est prise en compte lors de la pagination."
+                },
+                "prints": {
+                    "title": "Editions de carte",
+                    "get": {
+                        "title": "Récupérer les éditions d'une carte donnée",
+                        "description": "Retourne toutes les <span class=\"font-bold\">Card prints</span> d'une <span class=\"font-bold\">Card</span> donnée dans un objet paginé.",
+                        "params": {
+                            "card-id": "Oracle id de la <span class=\"font-bold\">Card</span> mère"
+                        }
+                    },
+                    "switch": {
+                        "title": "Changer l'édition d'une carte",
+                        "description": "Remplace l'édition d'une <span class=\"font-bold\">Deck card</span> donnée par une autre.",
+                        "params": {
+                            "card-id": "Id de la <span class=\"font-bold\">Deck card</span> mère"
+                        },
+                        "body": {
+                            "print-id": "ScryfallId de la nouvelle <span class=\"font-bold\">Card print</span>"
+                        }
+                    },
+                    "switch-related": {
+                        "title": "Changer l'édition des cartes liées aux deck cartes du deck",
+                        "description": "Remplace toutes les éditions des <span class=\"font-bold\">Cards</span> liées aux <span class=\"font-bold\">Deck cards</span> à partir de l'oracleId de la <span class=\"font-bold\">Card</span> mère pour le <span class=\"font-bold\">Deck</span>.",
+                        "params": {
+                            "deck-id": "Id du <span class=\"font-bold\">Deck</span>"
+                        },
+                        "body": {
+                            "print-id": "ScryfallId de la nouvelle <span class=\"font-bold\">Card print</span>"
+                        }
+                    }
                 }
             }
         }
