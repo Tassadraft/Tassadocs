@@ -54,7 +54,7 @@
     export let url = '';
 </script>
 
-<main class="flex flex-col min-h-screen min-w-screen">
+<main class="flex flex-col min-h-screen min-w-screen bg-gray-200 dark:bg-gray-900">
     <div class="px-3.5 min-h-screen">
         {#if !$isLoading}
             <Router {url}>
