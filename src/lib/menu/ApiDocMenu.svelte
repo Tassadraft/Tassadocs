@@ -50,7 +50,7 @@
 
                     <nav
                         id="menu"
-                        class="fixed top-0 left-0 w-64 h-full dark:bg-gray-800 transform transition-transform duration-300 ease-in-out {isOpen
+                        class="fixed top-0 left-0 w-64 h-full  bg-gray-300 dark:bg-gray-800 transform transition-transform duration-300 ease-in-out {isOpen
                             ? ''
                             : '-translate-x-full'} overflow-y-auto"
                         style="z-index: 10000"
@@ -66,7 +66,7 @@
                 </div>
             {/if}
         </div>
-        <div class="ml-3">
+        <div class="md:ml-3">
             <slot name="content" />
         </div>
     </div>
