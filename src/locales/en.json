@@ -459,6 +459,14 @@
                         }
                     }
                 }
+            },
+            "front-client": {
+                "title": "Front client",
+                "description": "Each opensource front project has to register to manage its own terms and conditions on its own.",
+                "new": {
+                    "title": "Register a front client",
+                    "description": "Name length has to be between 3 and 50 characters long, and also has to be unique. Repository URI (and production URI if passed) have to be valid URIs."
+                }
             }
         }
     }

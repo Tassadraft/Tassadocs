@@ -51,6 +51,7 @@
     import NewDeck from './lib/tassadapi/endpoints/NewDeck.svelte';
     import EditDeck from './lib/tassadapi/endpoints/EditDeck.svelte';
     import FrontClient from './lib/tassadapi/models/FrontClient.svelte';
+    import FrontClientEndpoint from './lib/tassadapi/endpoints/FrontClient.svelte';
 
     export let url = '';
 </script>
@@ -109,6 +110,7 @@
                 <Route path="/tassadapi/end-points/processing"><Processing /></Route>
                 <Route path="/tassadapi/end-points/card/search"><CardSearch /></Route>
                 <Route path="/tassadapi/end-points/card/print"><CardPrintEndpoint /></Route>
+                <Route path="/tassadapi/end-points/front-client"><FrontClientEndpoint /></Route>
 
                 <Route path="*"><NotFound /></Route>
             </Router>

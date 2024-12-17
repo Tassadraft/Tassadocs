@@ -450,6 +450,14 @@
                         }
                     }
                 }
+            },
+            "front-client": {
+                "title": "Client front",
+                "description": "Chaque projet de client opensource doit être enregistré pour gérer indépendamment ses propres Conditions Générales d'Utilisation (CGU).",
+                "new": {
+                    "title": "Enregistrer un nouveau client front",
+                    "description": "La longue du nom doit être comprise entre 3 et 50 caractères, et doit aussi être unique. L'URL du repository (et celle de la production si renseignée) doivent être des URLs valides."
+                }
             }
         }
     }
