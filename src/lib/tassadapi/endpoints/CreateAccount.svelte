@@ -12,6 +12,7 @@
             method="post"
             endpoint={`${process.env.VITE_TASSADAPI_BASE_URL}/api/account-creation/send-mail`}
             body={{
+                username: 'string',
                 email: 'string',
                 password: 'string',
                 confirmPassword: 'string',
