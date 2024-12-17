@@ -44,7 +44,8 @@
         "deck-category": "Deck category",
         "user": "User",
         "access-token": "Access token",
-        "processed-card": "Carte traitée"
+        "processed-card": "Carte traitée",
+        "front-client": "Client front"
     },
     "toast": {
         "copy": {

@@ -27,6 +27,7 @@
                 <MenuItem iconLeft="lego" href="/tassadapi/models/build">{$t('common.build')}</MenuItem>
                 <MenuItem iconLeft="file" href="/tassadapi/models/file">{$t('common.file')}</MenuItem>
                 <MenuItem iconLeft="package" href="/tassadapi/models/set">{$t('common.set')}</MenuItem>
+                <MenuItem iconLeft="package" href="/tassadapi/models/front-client">{$t('common.front-client')}</MenuItem>
             </Panel>
             <Panel>
                 <MenuItem iconLeft="user" href="/tassadapi/models/user">{$t('common.user')}</MenuItem>
