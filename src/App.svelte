@@ -52,6 +52,7 @@
     import EditDeck from './lib/tassadapi/endpoints/EditDeck.svelte';
     import FrontClient from './lib/tassadapi/models/FrontClient.svelte';
     import FrontClientEndpoint from './lib/tassadapi/endpoints/FrontClient.svelte';
+    import CreateAccount from './lib/tassadapi/endpoints/CreateAccount.svelte';
 
     export let url = '';
 </script>
@@ -98,6 +99,7 @@
 
                 <!-- Models documentation part -->
                 <Route path="/tassadapi/end-points"><TassadapiEndpoints /></Route>
+                <Route path="/tassadapi/end-points/create-account"><CreateAccount /></Route>
                 <Route path="/tassadapi/end-points/auth"><Auth /></Route>
                 <Route path="/tassadapi/end-points/contact"><Contact /></Route>
                 <Route path="/tassadapi/end-points/reset-password"><ResetPassword /></Route>

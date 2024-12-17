@@ -47,6 +47,7 @@
                 <Subtitle>{$t('menu.end-points')}</Subtitle>
             </div>
             <Panel>
+                <MenuItem iconLeft="shield" href="/tassadapi/end-points/create-account">{$t('tassadapi.end-points.create-account.title')}</MenuItem>
                 <MenuItem iconLeft="shield" href="/tassadapi/end-points/auth">{$t('tassadapi.end-points.auth.title')}</MenuItem>
                 <MenuItem iconLeft="password" href="/tassadapi/end-points/reset-password">{$t('tassadapi.end-points.reset-password.title')}</MenuItem>
                 <MenuItem iconLeft="user" href="/tassadapi/end-points/profile">{$t('tassadapi.end-points.profile.title')}</MenuItem>
