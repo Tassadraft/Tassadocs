@@ -44,7 +44,8 @@
         "deck-category": "Deck category",
         "user": "User",
         "access-token": "Access token",
-        "processed-card": "Carte traitée"
+        "processed-card": "Carte traitée",
+        "front-client": "Client front"
     },
     "toast": {
         "copy": {
@@ -448,6 +449,25 @@
                             "print-id": "ScryfallId de la nouvelle <span class=\"font-bold\">Card print</span>"
                         }
                     }
+                }
+            },
+            "front-client": {
+                "title": "Client front",
+                "description": "Chaque projet de client opensource doit être enregistré pour gérer indépendamment ses propres Conditions Générales d'Utilisation (CGU).",
+                "new": {
+                    "title": "Enregistrer un nouveau client front",
+                    "description": "La longue du nom doit être comprise entre 3 et 50 caractères, et doit aussi être unique. L'URL du repository (et celle de la production si renseignée) doivent être des URLs valides."
+                }
+            },
+            "create-account": {
+                "title": "Créer un nouveau compte",
+                "send-mail": {
+                    "title": "Pré-créer un compte",
+                    "description": "Un mail de confirmation sera envoyé à l'email renseigné. L'URL front passé sera concaténé avec '/:token'. Ce token doit être passé à Tassadapi pour confirmer la création du compte.\n\n- L'email doit être un email valide\n- Le mot de passe doit être au minimum long de 8 characters, et comporter au moins une minuscule, une majuscule, un chiffre et un caractère spécial\n- La confirmation de mot de passe doit être égal au mot de passe\n- Le client front doit être le nom de votre client front enregistré\n- L'URL front sera contaténé pour former un URL front qui devra ping l'endpoint ci-dessous."
+                },
+                "confirm": {
+                    "title": "Confirmer la création de compte",
+                    "description": "Le compte est créé si le token passé est authentifié. Ce token est envoyé par mail dans l'URL de redirection."
                 }
             }
         }
