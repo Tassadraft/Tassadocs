@@ -263,7 +263,7 @@
             }
         },
         "end-points": {
-            "title": "Endpoints Tassadapi",
+            "title": "Endpoints",
             "description": "Documentation des endpoints exposés de Tassadapi, comprenant les méthodes, query strings et corps de requête",
             "auth": {
                 "title": "Authentification",

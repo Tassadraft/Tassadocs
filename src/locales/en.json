@@ -263,7 +263,7 @@
             }
         },
         "end-points": {
-            "title": "Tassadapi endpoints",
+            "title": "Endpoints",
             "description": "Tassadapi exposed endpoints documentation including methods, query strings, bodies and responses",
             "auth": {
                 "title": "Authentication",
