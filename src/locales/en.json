@@ -319,7 +319,7 @@
                 },
                 "update": {
                     "title": "Update profile",
-                    "description": "Updates user's profile. Returns a <span class=\"font-bold\">User</span>. Username's length has to be between 3 and 50."
+                    "description": "Updates user's profile. Returns a <span class=\"font-bold\">User</span>."
                 }
             },
             "subscribed": {

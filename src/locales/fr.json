@@ -319,7 +319,7 @@
                 },
                 "update": {
                     "title": "Mise à jour du profil",
-                    "description": "Met à jour le profil de l'utilisateur. Retourne un <span class=\"font-bold\">User</span>. La longueur du nom d'utilisateur doit être comprise entre 3 et 50."
+                    "description": "Met à jour le profil de l'utilisateur. Retourne un <span class=\"font-bold\">User</span>."
                 }
             },
             "subscribed": {
@@ -345,13 +345,22 @@
                     "description": "Retourne un objet paginé des <span class=\"font-bold\">Decks</span> détenus."
                 },
                 "get": {
-                    "title": "Récupérer un deck détaillé"
+                    "title": "Récupérer un deck détaillé",
+                    "params": {
+                        "deck-id": "Id du <span class=\"font-bold\">Deck</span>"
+                    }
                 },
                 "delete": {
-                    "title": "Supprimer un deck"
+                    "title": "Supprimer un deck",
+                    "params": {
+                        "deck-id": "Id du <span class=\"font-bold\">Deck</span>"
+                    }
                 },
                 "is-legal": {
-                    "title": "Vérifier la légalité d'un deck entier"
+                    "title": "Vérifier la légalité d'un deck entier",
+                    "params": {
+                        "deck-id": "Id du <span class=\"font-bold\">Deck</span>"
+                    }
                 }
             },
             "new-deck": {

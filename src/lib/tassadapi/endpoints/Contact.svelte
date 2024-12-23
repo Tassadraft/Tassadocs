@@ -26,8 +26,8 @@
             endpoint={`${process.env.VITE_TASSADAPI_BASE_URL}/api/auth/contact`}
             body={{
                 subject: 'string',
-                message: 'string',
-                consent: 'boolean'
+                message: 'text [32, 1024]',
+                consent: 'boolean (true)'
             }}
             response={{ message: 'string' }}
             logged={true}

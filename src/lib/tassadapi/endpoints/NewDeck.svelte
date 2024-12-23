@@ -26,8 +26,8 @@
             method="post"
             endpoint={`${process.env.VITE_TASSADAPI_BASE_URL}/api/auth/decks/public`}
             body={{
-                name: 'string',
-                description: 'string | undefined',
+                name: 'string [3, 50]',
+                description: 'string < 1024 | undefined',
                 format: $t('tassadapi.end-points.new-deck.new.body.format'),
                 public: 'boolean',
                 enabled: 'boolean',

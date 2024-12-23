@@ -24,8 +24,8 @@
             method="post"
             endpoint={`${process.env.VITE_TASSADAPI_BASE_URL}/api/auth/profile/update`}
             body={{
-                username: 'string',
-                profilePicture: 'file'
+                username: 'string [3, 50]',
+                profilePicture: 'file | undefined'
             }}
             response={`<span class="font-bold">${$t('common.user')}</span>`}
             logged={true}
