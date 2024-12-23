@@ -472,7 +472,7 @@
                 "title": "Create new account",
                 "send-mail": {
                     "title": "Pre-create account and send a confirmation mail",
-                    "description": "Front URI will be concatenated with '/:token'. This token has to be passed to Tassadapi to confirm account creation.\n\n- Email has to be a valid email\n- Password has to be at least 8 characters long, have a lowercase, an uppercase, a number, and a special character\n- Confirm password has to fit password\n- Front client has to be your registered front client's name\n- Front URI will be concatenated to make a front URI that will have to ping the below endpoint"
+                    "description": "Front URI will be concatenated with '/:token'. This token has to be passed to Tassadapi to confirm account creation.\n\n- Email has to be a valid email\n- Password has to be at least 8 characters long, have a lowercase, an uppercase, a number, and a special character\n- Confirm password has to fit password\n- Front client has to be your registered front client's name\n- Front URI will be concatenated to make a front URI that will have to ping the below endpoint\n- Consent has to be a boolean set to true to ensure user has read and accepted the Terms and Conditions."
                 },
                 "confirm": {
                     "title": "Confirm account creation",

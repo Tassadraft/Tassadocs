@@ -463,7 +463,7 @@
                 "title": "Créer un nouveau compte",
                 "send-mail": {
                     "title": "Pré-créer un compte",
-                    "description": "Un mail de confirmation sera envoyé à l'email renseigné. L'URL front passé sera concaténé avec '/:token'. Ce token doit être passé à Tassadapi pour confirmer la création du compte.\n\n- L'email doit être un email valide\n- Le mot de passe doit être au minimum long de 8 characters, et comporter au moins une minuscule, une majuscule, un chiffre et un caractère spécial\n- La confirmation de mot de passe doit être égal au mot de passe\n- Le client front doit être le nom de votre client front enregistré\n- L'URL front sera contaténé pour former un URL front qui devra ping l'endpoint ci-dessous."
+                    "description": "Un mail de confirmation sera envoyé à l'email renseigné. L'URL front passé sera concaténé avec '/:token'. Ce token doit être passé à Tassadapi pour confirmer la création du compte.\n\n- L'email doit être un email valide\n- Le mot de passe doit être au minimum long de 8 characters, et comporter au moins une minuscule, une majuscule, un chiffre et un caractère spécial\n- La confirmation de mot de passe doit être égal au mot de passe\n- Le client front doit être le nom de votre client front enregistré\n- L'URL front sera contaténé pour former un URL front qui devra ping l'endpoint ci-dessous.\n- Le consentement doit être un booléen étant à true pour s'assurer que l'utilisateur a lu et accepté les Conditions Générales d'Utilisation."
                 },
                 "confirm": {
                     "title": "Confirmer la création de compte",

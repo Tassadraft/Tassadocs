@@ -17,7 +17,8 @@
                 password: 'string',
                 confirmPassword: 'string',
                 frontClient: 'string',
-                frontUri: 'string'
+                frontUri: 'string',
+                consent: 'true'
             }}
             response={{
                 message: 'string'
