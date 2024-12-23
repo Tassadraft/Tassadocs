@@ -32,7 +32,8 @@
             endpoint={`${process.env.VITE_TASSADAPI_BASE_URL}/api/account-creation/confirm/:token`}
             response={{
                 message: 'string',
-                token: `<span class="font-bold">${$t('common.access-token')}</span>`
+                token: `<span class="font-bold">${$t('common.access-token')}</span>`,
+                user: `<span class="font-bold">${$t('common.user')}</span>`
             }}
         />
     </div>

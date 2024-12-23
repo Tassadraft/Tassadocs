@@ -19,7 +19,8 @@
             }}
             response={{
                 message: 'string',
-                token: `<span class="font-bold">${$t('common.access-token')}</span>`
+                token: `<span class="font-bold">${$t('common.access-token')}</span>`,
+                user: `<span class="font-bold">${$t('common.user')}</span>`
             }}
         />
 
