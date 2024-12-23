@@ -319,7 +319,7 @@
                 },
                 "update": {
                     "title": "Mise à jour du profil",
-                    "description": "Met à jour le profil de l'utilisateur. Retourne un <span class=\"font-bold\">User</span>."
+                    "description": "Met à jour le profil de l'utilisateur. Retourne un <span class=\"font-bold\">User</span>. La longueur du nom d'utilisateur doit être comprise entre 3 et 50."
                 }
             },
             "subscribed": {
