@@ -31,7 +31,8 @@
             method="get"
             endpoint={`${process.env.VITE_TASSADAPI_BASE_URL}/api/account-creation/confirm/:token`}
             response={{
-                message: 'string'
+                message: 'string',
+                token: `<span class="font-bold">${$t('common.access-token')}</span>`
             }}
         />
     </div>
