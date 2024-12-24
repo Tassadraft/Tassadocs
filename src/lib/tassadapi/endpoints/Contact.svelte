@@ -13,7 +13,7 @@
             description={$t('tassadapi.end-points.contact.subjects.description')}
             method="get"
             endpoint={`${process.env.VITE_TASSADAPI_BASE_URL}/api/auth/contact/subjects`}
-            response={['<span class="text-orange-500">string</span> []']}
+            response={'<span class="text-orange-500">string</span> []'}
             logged={true}
             bind:isLogged
         />
