@@ -5,5 +5,3 @@
 ## Description
 
 ### Links
-
--   [MIT Licence](/doc/LICENCE.md)
